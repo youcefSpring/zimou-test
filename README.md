@@ -1,12 +1,10 @@
-
 # Zimou Technical test
-
-
 
 1. Create login/register UI
 1. Create 5000 Stores for each store add 100 packages using seed or factories
 1. Create item in the menu to show packages with the following columns(tracking_code, store name, package name, status, client full name, phone, wilaya, commune, delivery type, status name)
 1. Add a button to export all the packages in csv or excel file with the same columns above
+1. (optional) If you add create package will be an extra point 😉
 
 Notes:
 
