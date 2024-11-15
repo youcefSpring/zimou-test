@@ -17,6 +17,11 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
+    <li class="nav-item ">
+        <a class="nav-link" href="{{ route('logout') }}">
+            <i class="fas fa-logout fa-tachometer-alt"></i>
+            <span>Logout</span></a>
+    </li>
 {{--
     <!-- Divider -->
     <hr class="sidebar-divider">
