@@ -14,7 +14,7 @@ class PackageFactory extends Factory
     {
         return [
             'uuid' => $this->faker->uuid,
-            'tracking_code' => $this->faker->unique()->numerify('TRK#####'),
+            'tracking_code' => $this->faker->unique()->bothify('???######'),
             'commune_id' => 1, // Or use a dynamic ID if you have seeded communes
             'delivery_type_id' => 1, // Or use a dynamic ID if you have seeded delivery types
             'status_id' => 1, // Or use a dynamic ID if you have seeded package statuses

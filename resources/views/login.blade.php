@@ -1,8 +1,6 @@
 @extends('head')
 
-
-
-    <div class="container">
+<div class="container">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -21,6 +19,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Login</h1>
                                     </div>
+
                                     <form class="user login-form" action="{{ route('login') }}" method="POST">
                                         @csrf
                                         <div class="form-group">
@@ -40,6 +39,21 @@
                                     <div class="text-center">
                                         <a class="small" href="{{ route('register') }}">Create an Account!</a>
                                     </div>
+                                    @if (session('status'))
+                                        <div class="alert alert-success" role="alert">
+                                             {{ session('status') }}
+                                         </div>
+                                    @endif
+                                    <!-- Display Validation Errors -->
+                                    @if ($errors->any())
+                                       <div class="alert alert-danger">
+                                              <ul>
+                                                @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                                @endforeach
+                                              </ul>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -50,7 +64,7 @@
 
         </div>
 
-    </div>
+</div>
 
    @extends('footer')
 

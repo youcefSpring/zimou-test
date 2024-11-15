@@ -1,4 +1,5 @@
 <?php
+namespace App\Http\Controllers;
 
 // app/Http/Controllers/AuthController.php
 
@@ -60,5 +61,20 @@ class AuthController extends Controller
         ]);
 
         return redirect()->route('login')->with('status', 'Account created successfully. Please log in.');
+    }
+
+    public function logout(Request $request)
+    {
+        // Log out the user
+        Auth::logout();
+
+        // Invalidate the user's session
+        $request->session()->invalidate();
+
+        // Regenerate the session token
+        $request->session()->regenerateToken();
+
+        // Redirect to login page with a success message
+        return redirect()->route('login')->with('status', 'You have been logged out successfully.');
     }
 }
